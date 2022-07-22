@@ -1,3 +1,6 @@
+_This is a 1:1 copy of https://github.com/elwinar/rambler. The upstream repo stopped updating image at Dockerhub.
+Here we clone it and make the image up to date._
+
 # rambler 
 [![build](https://app.wercker.com/status/b645428b6f548288d71d3ba83cc1a783/s/master "wercker status")](https://app.wercker.com/project/bykey/b645428b6f548288d71d3ba83cc1a783)
 [![Coverage Status](https://coveralls.io/repos/elwinar/rambler/badge.svg?branch=master&service=github)](https://coveralls.io/github/elwinar/rambler?branch=master)
