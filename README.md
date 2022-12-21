@@ -1,6 +1,21 @@
 _This is a 1:1 copy of https://github.com/elwinar/rambler. The upstream repo stopped updating image at Dockerhub.
 Here we clone it and make the image up to date._
 
+NOTE-zw: to update the modules dependencies:
+
+1. Check the upstream https://github.com/elwinar/rambler for new updates. If anything new, update this repo
+2. Update golang version at `go.mod`, `Dockerfile`, `docker-compose.yml` if anything new
+3. `go get -u`
+4. `go mod tidy`
+5. `make build`
+6. `make test`
+7. (if everything is okay) commit the changes to github
+8. `export RAMBLER_VERSION=5.4.0`, or whatever the new upstream version number
+8. `docker build -t zhaowde/rambler:$RAMBLER_VERSION .`
+9. `docker tag $(docker image ls zhaowde/rambler:$RAMBLER_VERSION --format "{{.ID}}") zhaowde/rambler:latest`
+10. `docker push zhaowde/rambler:$RAMBLER_VERSION`
+11. `docker push zhaowde/rambler:latest`
+
 # rambler 
 [![build](https://app.wercker.com/status/b645428b6f548288d71d3ba83cc1a783/s/master "wercker status")](https://app.wercker.com/project/bykey/b645428b6f548288d71d3ba83cc1a783)
 [![Coverage Status](https://coveralls.io/repos/elwinar/rambler/badge.svg?branch=master&service=github)](https://coveralls.io/github/elwinar/rambler?branch=master)
