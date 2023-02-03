@@ -2,6 +2,6 @@ version: "3"
 
 services:
         main:
-                image: golang:1.19-alpine
+                image: golang:1.20-alpine
                 volumes:
                         - .:/src

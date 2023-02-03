@@ -11,13 +11,10 @@ NOTE-zw: to update the modules dependencies:
 6. `make test`
 7. (if everything is okay) commit the changes to github
 8. `export RAMBLER_VERSION=5.4.0`, or whatever the new upstream version number
-8. `docker build -t zhaowde/rambler:$RAMBLER_VERSION .`
-9. `docker tag $(docker image ls zhaowde/rambler:$RAMBLER_VERSION --format "{{.ID}}") zhaowde/rambler:latest`
-10. `docker push zhaowde/rambler:$RAMBLER_VERSION`
-11. `docker push zhaowde/rambler:latest`
+9. `docker buildx build --allow security.insecure --push --platform linux/amd64,linux/arm64 --builder rcplus --tag zhaowde/rambler:$RAMBLER_VERSION --tag zhaowde/rambler:latest .`
+10. (for the command above, if the builder `rcplus` does not exist) `docker buildx create --bootstrap --name rcplus --driver docker-container --platform linux/amd64,linux/arm64 --use --buildkitd-flags '--allow-insecure-entitlement security.insecure'`
 
 # rambler 
-[![build](https://app.wercker.com/status/b645428b6f548288d71d3ba83cc1a783/s/master "wercker status")](https://app.wercker.com/project/bykey/b645428b6f548288d71d3ba83cc1a783)
 [![Coverage Status](https://coveralls.io/repos/elwinar/rambler/badge.svg?branch=master&service=github)](https://coveralls.io/github/elwinar/rambler?branch=master)
 
 A simple and language-independent SQL schema migration tool

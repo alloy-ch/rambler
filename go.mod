@@ -1,6 +1,6 @@
 module github.com/elwinar/rambler
 
-go 1.19
+go 1.20
 
 require (
 	github.com/bradfitz/slice v0.0.0-20180809154707-2b758aa73013
@@ -11,7 +11,7 @@ require (
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/lib/pq v1.10.7
 	github.com/mattn/go-sqlite3 v1.14.16
-	github.com/urfave/cli v1.22.10
+	github.com/urfave/cli v1.22.12
 )
 
 require (
