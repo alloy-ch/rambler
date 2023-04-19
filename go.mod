@@ -7,9 +7,9 @@ require (
 	github.com/client9/xson v0.0.0-20180321172152-0e50cdfc08c0
 	github.com/go-sql-driver/mysql v1.7.0
 	github.com/google/go-cmp v0.5.8
-	github.com/imdario/mergo v0.3.14
+	github.com/imdario/mergo v0.3.15
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/lib/pq v1.10.7
+	github.com/lib/pq v1.10.8
 	github.com/mattn/go-sqlite3 v1.14.16
 	github.com/urfave/cli v1.22.12
 )
