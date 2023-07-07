@@ -28,7 +28,7 @@ Go users can also simply compile it from source and install it as a go
 executable using the following command :
 
 ```
-go install github.com/elwinar/rambler
+go install github.com/zhaow-de/rambler
 ```
 
 Releases are compiled using the wonderful

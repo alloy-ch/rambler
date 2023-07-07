@@ -1,5 +1,5 @@
 targets="darwin/arm64,darwin/amd64,linux/amd64,linux/arm64"
-pkg="github.com/elwinar/rambler"
+pkg="github.com/zhaow-de/rambler"
 version=$(shell git describe --tags)
 ldflags="-X main.VERSION=${version}"
 
