@@ -9,10 +9,12 @@ NOTE-zw: to update the modules dependencies:
 4. `go mod tidy`
 5. `make build`
 6. `make test`
-7. (if everything is okay) commit the changes to github
+7. (if everything is okay) commit the changes to GitHub
 8. `export RAMBLER_VERSION=5.4.0`, or whatever the new upstream version number
-9. `docker buildx build --allow security.insecure --push --platform linux/amd64,linux/arm64 --builder rcplus --tag zhaowde/rambler:$RAMBLER_VERSION --tag zhaowde/rambler:latest .`
+9. `docker buildx build --allow security.insecure --push --platform linux/amd64,linux/arm64 --builder rcplus --tag alloych/rambler:$RAMBLER_VERSION --tag alloych/rambler:latest .`
 10. (for the command above, if the builder `rcplus` does not exist) `docker buildx create --bootstrap --name rcplus --driver docker-container --platform linux/amd64,linux/arm64 --use --buildkitd-flags '--allow-insecure-entitlement security.insecure'`
+
+-----
 
 # rambler 
 [![Coverage Status](https://coveralls.io/repos/elwinar/rambler/badge.svg?branch=master&service=github)](https://coveralls.io/github/elwinar/rambler?branch=master)
