@@ -1,4 +1,4 @@
-FROM golang:1.22
+FROM golang:1.23
 COPY . /go/src/github.com/elwinar/rambler
 WORKDIR /go/src/github.com/elwinar/rambler
 RUN go get ./...
